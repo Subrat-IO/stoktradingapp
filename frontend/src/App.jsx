@@ -1,12 +1,13 @@
 import { useState } from 'react'
 
 import './App.css'
+import HomePage from './landing-page/home/HomePage'
 
 function App() {
 
   return (
     <>
-    <div>Zerodha clone</div>
+  <HomePage></HomePage>
      
     </>
   )
