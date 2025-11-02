@@ -28,57 +28,6 @@ This app simulates a real-world trading experience — users can create accounts
 ## ⚙️ Installation & Setup
 
 1. **Clone the repository**
-   bash
-   git clone (https://github.com/Subrat-IO/stoktradingapp).git
+   ```bash
+   git clone https://github.com/<your-username>/stocktradingapp.git
    cd stocktradingapp
-
-
-2. **Install dependencies**
-
-   bash
-   npm install
-   cd client && npm install
-   
-
-3. **Set up environment variables**
-   Create a `.env` file in the root directory and add:
-
-   bash
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret_key
-   ```
-
-4. **Run the app**
-
-   bash
-   # Run backend
-   npm run server
-
-   # Run frontend
-   cd client && npm start
-   
-
-
-## 📷 Preview
-
-*(Add screenshots or demo video links here if available)*
-Example:
-![App Screenshot](./preview.png)
-
-
-
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-Feel free to fork the repo and open a PR.
-
----
-
-
----
-
-## 👨‍💻 Author
-
-**Subrat Sethi**
-🔗 [GitHub](https://github.com/Subrat-IO) | [LinkedIn](https://www.linkedin.com/in/subrat-sethi-941b17217/)
