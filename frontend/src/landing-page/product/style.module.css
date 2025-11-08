@@ -1,0 +1,53 @@
+.universeSection {
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+}
+
+/* Blog link */
+.link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Partner logos */
+.partnerLogo {
+  width: 100px;
+  height: auto;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  filter: grayscale(25%);
+}
+.partnerLogo:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  filter: grayscale(0%);
+}
+
+/* Align 3 in one row on desktop */
+.universeRow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 992px) {
+  .partnerLogo {
+    width: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partnerLogo {
+    width: 140px;
+  }
+}
+
+.paragraph{
+    font-size: .8rem;
+    text-align: center;
+}
+

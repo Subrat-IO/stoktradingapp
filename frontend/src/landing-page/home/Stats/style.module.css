@@ -1,0 +1,40 @@
+.row{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-top: 7rem;
+}
+
+.rightsection{
+    margin-left: -5rem;
+}
+.rightsection h3{
+    margin-bottom: 0.9rem;
+}
+.rightsection h1{
+    margin-bottom: 3rem;
+}
+.rightsection p{
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.img{
+    width: 95%;
+    height: 100%;
+    margin-left: 8rem;
+    margin-top: -3rem;
+}
+
+.links {
+    text-align: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-left: 14rem;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+.links a{
+    text-decoration: none;
+}

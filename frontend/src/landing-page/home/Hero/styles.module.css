@@ -1,0 +1,22 @@
+.hero {
+  width: 200px;
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #007bff; 
+  color: #fff;
+  border: 1px solid #007bff;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.hero:hover {
+  background-color: #0056b3; 
+  transform: translateY(-2px);
+}
+
+.hero:active {
+  background-color: #004085; 
+  transform: scale(0.97);
+}

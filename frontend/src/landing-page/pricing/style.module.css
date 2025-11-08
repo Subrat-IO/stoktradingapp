@@ -1,0 +1,19 @@
+*{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.container img{
+    height: 20vh;
+
+}
+.container{
+    margin-top: 30rem;
+    margin-bottom: 10rem;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.container p{
+    line-height: 2rem;
+    opacity: 70%;
+    font-weight: 500;
+}

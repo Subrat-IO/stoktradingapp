@@ -1,0 +1,107 @@
+.container {
+  background-color: rgba(255, 255, 255, 0.97);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.left { display: flex; align-items: center; }
+.logo { width: 180px;
+   height: auto; 
+   margin-right: -10rem;
+  }
+
+/* NAV LINKS - normal text look */
+.menulinks {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-left: 30rem;
+  margin-right: -10rem;
+}
+
+.navlink {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.navlink:hover {
+  color: #007bff;
+  opacity: 0.85;
+}
+
+/* DROPDOWN / MENU WRAPPER */
+.menuWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+/* button that toggles dropdown (looks like icon) */
+.dropdownBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+/* dropdown menu panel */
+.dropdownMenu {
+  position: absolute;
+  right: 0;
+  top: 44px;
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid #e6e9ef;
+  box-shadow: 0 6px 18px rgba(27, 40, 60, 0.08);
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  padding: 0.4rem 0;
+  z-index: 200;
+}
+
+/* visible state */
+.show {
+  display: flex;
+}
+
+/* individual items */
+.dropdownItem {
+  padding: 0.6rem 1rem;
+  color: #1f2937;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.dropdownItem:hover {
+  background: #f5f7fa;
+  color: #007bff;
+}
+
+/* RESPONSIVE: hide nav links on small screens, keep dropdown icon */
+@media (max-width: 768px) {
+  .menulinks {
+    display: none;
+  }
+  .logo { width: 140px; }
+}
+
+/* ensure dropdown sits nicely on small screens */
+@media (max-width: 480px) {
+  .dropdownMenu { right: 8px; left: auto; top: 42px; }
+}

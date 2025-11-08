@@ -1,17 +1,17 @@
 import React from 'react'
-import Awards from './Awards.jsx'
-import Hero from './Hero.jsx'
-import Pricing from './Pricing.jsx'
+import Awards from './Awards/Awards.jsx'
+import Hero from './Hero/Hero.jsx'
+import Pricing from './pricing/Pricing.jsx'
 import OpenAccount from '../OpenAccount.jsx'
-import Footer from '../footer.jsx'
-import Stats from './Stats.jsx'
-import Education from './education.jsx'
-import Navbar from './Navbar/navbar.jsx'
+import Footer from '../Footer/footer.jsx'
+import Stats from '../home/Stats/Stats.jsx'
+import Education from './Education/education.jsx'
+import Navbar from '../Navbar/navbar.jsx'
 
 function HomePage() {
     return (
         <>
-        <Navbar></Navbar>
+            <Navbar></Navbar>
             <Hero></Hero>
             <Awards></Awards>
             <Stats></Stats>
@@ -19,7 +19,6 @@ function HomePage() {
             <Education>
             </Education>
             <OpenAccount></OpenAccount>
-            <Footer></Footer>
         </>
     )
 }
