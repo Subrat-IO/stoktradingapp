@@ -15,7 +15,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={`${styles.container} navbar`}>
+    <nav className={`${styles.container} navbar p-4`}>
       <div className={styles.left}>
         <a href="/">
           <img src="/media/logo.svg" alt="logo" className={styles.logo} />

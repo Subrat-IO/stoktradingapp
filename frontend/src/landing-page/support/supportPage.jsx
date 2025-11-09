@@ -1,13 +1,14 @@
-import React from 'react'
-import Ticket from './ticket'
+import React from "react";
+import Ticket from "./ticket";
+import Hero from "./hero";
 
 function SupportPage() {
   return (
     <>
-    <hero></hero>
-    <Ticket></Ticket>
-  </>
-  )
+      <Hero></Hero>
+      <Ticket></Ticket>
+    </>
+  );
 }
 
-export default SupportPage
+export default SupportPage;

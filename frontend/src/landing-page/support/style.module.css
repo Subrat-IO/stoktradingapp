@@ -23,6 +23,74 @@
     margin-left: 15%;
 }
 
+/* <----------**--------------> */
+
+.Herocontainer{
+    height: 500px;
+    width: 100%;
+    margin-top: -1.2%;
+}
+
+
+.heroheading{
+    width: 100%;
+    align-items: center;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.tracktickets{
+    color: white;
+}
+
+
+.answer{
+    color: white;
+    justify-content: center;
+    margin-left: 10%;
+    margin-top: -50px;
+}
+
+
+.listings li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+   
+}
+
+.listings li{
+    margin: 1.2rem;
+}
+
+.heroheading h3{
+    color: white;
+}
+
+.inputarea{
+    height: 60px;
+    width: 37%;
+    border-radius: 5px;
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    opacity: 80%;
+}
+
+
+
+.answer h2{
+    margin-left: 2%;
+    margin-bottom: 20px;
+}
+
+
+.featured{
+    margin-top: 50px;
+}
+
 @media (max-width:1000px){
     .listitems li a{
         font-size: 1rem;
@@ -33,3 +101,5 @@
    
 
 }
+
+
