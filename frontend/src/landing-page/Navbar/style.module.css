@@ -78,6 +78,9 @@
 .show {
   display: flex;
 }
+.navlinks{
+  display: none;
+}
 
 /* individual items */
 .dropdownItem {
@@ -94,11 +97,23 @@
 }
 
 /* RESPONSIVE: hide nav links on small screens, keep dropdown icon */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .menulinks {
     display: none;
   }
-  .logo { width: 140px; }
+  .logo { width: 140px;
+   }
+
+   .navlinks{
+    display: flex;
+    font-size: 1rem;
+    gap: 1.2rem;
+    margin-top: 20px;
+    padding: 10px;
+   }
+   .dropdownMenu{
+    padding: 40%;
+   }
 }
 
 /* ensure dropdown sits nicely on small screens */

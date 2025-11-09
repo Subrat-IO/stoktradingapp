@@ -1,8 +1,12 @@
 import React from 'react'
+import Ticket from './ticket'
 
 function SupportPage() {
   return (
-    <div>supportPage</div>
+    <>
+    <hero></hero>
+    <Ticket></Ticket>
+  </>
   )
 }
 
