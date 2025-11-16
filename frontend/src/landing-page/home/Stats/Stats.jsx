@@ -40,10 +40,9 @@ function Stats() {
           />
           <div className={`${styles.links}`}>
             <a className="mx-5" href="/">
-              Explore Our Products{" "}
-              <i class="bx bx-arrow-back bx-rotate-180"></i>{" "}
+              ExploreOurProducts<i class="bx bx-arrow-back bx-rotate-180"></i>{" "}
             </a>
-            <a href="">Try Kite</a>
+            <a href="">TryKite</a>
           </div>
         </div>
       </div>

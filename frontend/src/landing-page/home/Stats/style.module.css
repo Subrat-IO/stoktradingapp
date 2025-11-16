@@ -38,3 +38,25 @@
 .links a{
     text-decoration: none;
 }
+
+@media(max-width: 1000px){
+    .rightsection h1{
+       font-size: 2rem;
+    }
+    .rightsection h3{
+        font-size: 1.3rem;
+    }
+    .rightsection p{
+        font-size: 1rem;
+    }
+    .img{
+        margin-top: 2rem;
+        height: 50vh;
+        width: 70%;
+    }
+    .links{
+        display: flex;
+        font-size: 1rem;
+        margin-left: 4rem;
+    }
+}

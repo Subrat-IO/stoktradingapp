@@ -22,3 +22,21 @@
     font-size: 2.6rem;
     margin-bottom: 5rem;
 }
+
+@media(max-width:1000px){
+    .container  img{
+        height: 70%;
+        width: 90%;
+        margin-right: 5rem;
+    }
+    .rightsection{
+        margin-left: 2rem;  
+    }
+    .rightsection h1{
+        font-size: 2rem;
+
+    }
+    .rightsection p{
+        font-size: 1.2rem;
+    }
+}
