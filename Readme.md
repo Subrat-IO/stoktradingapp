@@ -29,5 +29,5 @@ This app simulates a real-world trading experience — users can create accounts
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/<your-username>/stocktradingapp.git
+   git clone https://github.com/Subrat-IO/stocktradingapp.git
    cd stocktradingapp
