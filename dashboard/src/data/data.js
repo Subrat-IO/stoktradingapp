@@ -104,7 +104,7 @@ export const holdings = [
     avg: 250.3,
     price: 266.45,
     net: "+6.45%",
-    day: "+3.54%",
+    day: "+3.54%",  
   },
   {
     name: "M&M",
