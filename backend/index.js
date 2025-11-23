@@ -2,64 +2,41 @@ const express = require("express");
 const mongoose = require("mongoose");
 const HoldingModel = require("./models/HoldingModel.js");
 const PositionModel = require("./models/PositionModel.js");
+const cors = require("cors");
 
 require("dotenv").config();
 
 const app = express();
 
-const PORT = process.env.PORT;
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
+const PORT = process.env.PORT;
 const uri = process.env.MONGO_URI;
 
-app.get("/addpositions", (req, res) => {
-  let tempPositions = [
-    {
-      product: "CNC",
-      name: "EVEREADY",
-      qty: 2,
-      avg: 316.27,
-      price: 312.35,
-      net: "+0.58%",
-      day: "-1.24%",
-      isLoss: true,
-    },
-    {
-      product: "CNC",
-      name: "JUBLFOOD",
-      qty: 1,
-      avg: 3124.75,
-      price: 3082.65,
-      net: "+10.04%",
-      day: "-1.35%",
-      isLoss: true,
-    },
-  ];
+app.get("/allholdings", async (req, res) => {
+  const allHoldings = await HoldingModel.find({});
+  res.json(allHoldings);
+});
 
-  tempPositions.forEach((item) => {
-    let newPosition = new PositionModel({
-      product: item.product,
-      name: item.name,
-      qty: item.qty,
-      avg: item.avg,
-      price: item.price,
-      net: item.net,
-      day: item.day,
-      isLoss: item.isLoss,
-    });
-    newPosition.save();
-  });
-
-  res.send("Done!");
+app.get("/allpositions", async (req, res) => {
+  const allPosition = await PositionModel.find({});
+  res.json(allPosition);
 });
 
 const startServer = async () => {
   try {
+    await mongoose.connect(uri, {});
+    console.log("db connected");
+
     app.listen(PORT, () => {
       console.log(`server running on port ${PORT}`);
     });
-    await mongoose.connect(uri, {});
-
-    console.log("db connected");
   } catch (error) {
     console.log("db connection failed:", error.message);
   }
