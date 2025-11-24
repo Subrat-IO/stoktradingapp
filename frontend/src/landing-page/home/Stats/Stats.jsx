@@ -3,46 +3,41 @@ import styles from "./style.module.css";
 
 function Stats() {
   return (
-    <div className="container mb-5">
-      <div className={` row ${styles.row} `}>
-        <div className={`col-6 ${styles.rightsection}`}>
-          <h1>Trust With Confidence</h1>
+    <div className="container my-5">
+      <div className="row align-items-center gy-4">
+        <div className="col-12 col-md-6">
+          <h1 className={styles.heading}>Trust With Confidence</h1>
           <h3>Customer First Always</h3>
-          <p className="text-muted">
-            That's why 1.3crore+ customers trust Zerodha with <br />
-            3.5+lakh crores worth of equity investments
-          </p>
+          <p className="text-muted">1.3+ CRORE investors trust Zerodha.</p>
+
           <h3>No spam or gimmicks</h3>
           <p className="text-muted">
-            No gimmicks "spam" gimmification or annoying push notifications.
-            <br />
-            High quality apps that you use at your pace, the way you like
+            No spammy push notifications, only quality tools.
           </p>
+
           <h3>The Zerodha Universe</h3>
           <p className="text-muted">
-            Not just an app, but a whole ecosystem. our investments in 30+
-            <br />
-            fintech startups offer you talored services specific to your needs
+            30+ startup ecosystem helping finance users.
           </p>
+
           <h3>Do better with money</h3>
           <p className="text-muted">
-            With initatives like nudge and kill switch , we don't just
-            <br />
-            facilitate transactions, but actively help you do better with your
-            money
+            Tools like Nudge & Kill Switch help you invest smarter.
           </p>
         </div>
-        <div className="col-6">
+
+        <div className="col-12 col-md-6 text-center">
           <img
-            className={`${styles.img}`}
+            className={`${styles.img} img-fluid`}
             src="media/ecosystem.png"
             alt="ecoSystem"
           />
-          <div className={`${styles.links}`}>
-            <a className="mx-5" href="/">
-              ExploreOurProducts<i class="bx bx-arrow-back bx-rotate-180"></i>{" "}
+
+          <div className={`${styles.links} mt-3`}>
+            <a className="mx-3" href="/">
+              Explore Products
             </a>
-            <a href="">TryKite</a>
+            <a href="/">Try Kite</a>
           </div>
         </div>
       </div>

@@ -3,10 +3,9 @@ import styles from "./style.module.css";
 
 function Universe() {
   return (
-    <section className={`${styles.universeSection} container`}>
-      {/* Blog Info */}
-      <div className="text-center mt-5">
-        <h5 className="mb-5">
+    <section className={`container ${styles.universeSection}`}>
+      <div className="text-center mt-4">
+        <h5 className={styles.sub}>
           Want to know more about our technology stack? Check out the{" "}
           <a
             href="https://zerodha.tech"
@@ -20,80 +19,81 @@ function Universe() {
         </h5>
       </div>
 
-      {/* Title */}
-      <h2 className="text-center mt-5 pt-5  mb-3 fw-semibold">The Zerodha Universe</h2>
-      <p className="text-center text-muted mb-5">
-        Extend your trading and investment experience even further with our partner platforms.
+      <h2 className={`text-center fw-semibold mt-5 ${styles.header}`}>
+        The Zerodha Universe
+      </h2>
+      <p className={`text-center text-muted mb-5 ${styles.sub2}`}>
+        Extend your trading and investment experience even further with our
+        partner platforms.
       </p>
 
-      {/* Row 1 */}
-      <div className={`row text-center justify-content-center ${styles.universeRow}`}>
-        <div className="col-12 col-md-4 mb-5">
-          <a href="https://zerodhafundhouse.com" target="_blank" rel="noopener noreferrer">
-            <img src="/media/zerodhaFundhouse.png" alt="Zerodha Fund House" className={styles.partnerLogo} />
-          </a>
-          <p className={`text-muted mt-3 ${styles.paragraph}`}>
-            Our asset management venture that is creating <br /> simple and transparent index funds
-            to <br /> help you save for your goals.
-          </p>
-        </div>
-
-        <div className="col-12 col-md-4 mb-5">
-          <a href="https://sensibull.com" target="_blank" rel="noopener noreferrer">
-            <img src="/media/sensibullLogo.svg" alt="Sensibull" className={styles.partnerLogo} />
-          </a>
-          <p className={`text-muted mt-3 ${styles.paragraph}`}>
-            Options trading platform that lets you create  <br />strategies, analyze positions,
-            and examine data points  <br />like open interest, FII/DII, and more.
-          </p>
-        </div>
-
-        <div className="col-12 col-md-4 mb-5">
-          <a href="https://tijorifinance.com" target="_blank" rel="noopener noreferrer">
-            <img src="/media/tijori.svg" alt="Tijori" className={styles.partnerLogo} />
-          </a>
-          <p className={`text-muted mt-3 ${styles.paragraph}`}>
-            Investment research platform that offers <br /> detailed insights on stocks, sectors,
-           <br /> supply chains, and more.
-          </p>
-        </div>
+      <div className="row text-center justify-content-center">
+        {[
+          {
+            logo: "zerodhaFundhouse.png",
+            link: "https://zerodhafundhouse.com",
+            text: "Creating simple & transparent index funds for saving goals.",
+          },
+          {
+            logo: "sensibullLogo.svg",
+            link: "https://sensibull.com",
+            text: "Options platform for strategies, positions & data analysis.",
+          },
+          {
+            logo: "tijori.svg",
+            link: "https://tijori.finance.com",
+            text: "Deep stock insights: sectors, supply chains & fundamentals.",
+          },
+        ].map((i, k) => (
+          <div key={k} className="col-12 col-md-4 mb-5">
+            <a href={i.link} target="_blank">
+              <img
+                src={`/media/${i.logo}`}
+                alt=""
+                className={styles.partnerLogo}
+              />
+            </a>
+            <p className={`text-muted mt-3 ${styles.paragraph}`}>{i.text}</p>
+          </div>
+        ))}
       </div>
 
-      {/* Row 2 */}
-      <div className={`row text-center justify-content-center ${styles.universeRow}`}>
-        <div className="col-12 col-md-4 mb-5">
-          <a href="https://www.streak.tech" target="_blank" rel="noopener noreferrer">
-            <img src="/media/streakLogo.png" alt="Streak" className={styles.partnerLogo} />
-          </a>
-          <p className={`text-muted mt-3 ${styles.paragraph}`}>
-            Systematic trading platform that <br /> allows you to create and backtest strategies <br />
-            without coding.
-          </p>
-        </div>
-
-        <div className="col-12 col-md-4 mb-5">
-          <a href="https://www.smallcase.com" target="_blank" rel="noopener noreferrer">
-            <img src="/media/smallcaseLogo.png" alt="Smallcase" className={styles.partnerLogo} />
-          </a>
-          <p className={`text-muted mt-3 ${styles.paragraph}`}>
-            Thematic investing platform that helps <br /> you invest in diversified baskets <br />0 of stocks or ETFs.
-          </p>
-        </div>
-
-        <div className="col-12 col-md-4 mb-5">
-          <a href="https://joinditto.in" target="_blank" rel="noopener noreferrer">
-            <img src="/media/dittoLogo.png" alt="Ditto" className={styles.partnerLogo} />
-          </a>
-          <p className={`text-muted mt-3 ${styles.paragraph}`}>
-            Personalized advice on life and health insurance. No spam and no mis-selling.
-          </p>
-        </div>
-        <div>
-         <button className="mb-3 mt-5 px-5 py-3 btn btn-primary text-center" ><a href="" className="text-decoration-none" style={{color:"white"}}>Sign Up for Free</a></button>
-
-        </div>
+      <div className="row text-center justify-content-center">
+        {[
+          {
+            logo: "streakLogo.png",
+            link: "https://www.streak.tech",
+            text: "Create and backtest strategies without coding.",
+          },
+          {
+            logo: "smallcaseLogo.png",
+            link: "https://www.smallcase.com",
+            text: "Invest in diversified theme-based stock baskets.",
+          },
+          {
+            logo: "dittoLogo.png",
+            link: "https://joinditto.in",
+            text: "Personal insurance advisory without spam or mis-selling.",
+          },
+        ].map((i, k) => (
+          <div key={k} className="col-12 col-md-4 mb-5">
+            <a href={i.link} target="_blank">
+              <img
+                src={`/media/${i.logo}`}
+                alt=""
+                className={styles.partnerLogo}
+              />
+            </a>
+            <p className={`text-muted mt-3 ${styles.paragraph}`}>{i.text}</p>
+          </div>
+        ))}
       </div>
-     
+
+      <div className="text-center">
+        <a href="/" className="btn btn-primary px-5 py-3">
+          Sign Up for Free
+        </a>
+      </div>
     </section>
   );
 }

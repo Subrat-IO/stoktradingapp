@@ -1,37 +1,10 @@
-.container{
-    display: flex;
-    padding: 5rem;
-    margin-top: 10rem;
-    
+.price {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #0d6efd;
 }
 
-.pricingpanel{
-    margin-left: -8rem;
-    display: inline;
-}
-
-.pricing{
-    text-decoration: none;
-    font-size: 1.2rem;
-    justify-content: center;
-
-
-}
-.fontsizeh1{
-    font-size: 2rem;
-}
-
-.table{
-    margin-right: -6rem;
-    width: 140%;
-    margin-left: 10rem;
-    
-
-}
-.divpanel{
-    border: 1px solid rgba(129, 122, 122, 0.617);
-    padding: 20px;
-}
-.divpanel p{
-    font-size: 1.2rem;
+.pricing {
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.8vw, 1.2rem);
 }

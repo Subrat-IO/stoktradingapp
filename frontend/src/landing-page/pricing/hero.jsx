@@ -1,39 +1,45 @@
 import React from "react";
-import styles from "./style.module.css"
+import styles from "./style.module.css";
 
-function Hero() {
+function PricingHero() {
   return (
     <>
-      <div className="text-center p-5 mb-5">
-        <h2>Pricing</h2>
-        <h5 className="opacity-50 mt-3">List of all charges and taxes</h5>
+      {/* ===== HERO TEXT ===== */}
+      <div className="text-center p-5 mt-4">
+        <h2 className={`fw-semibold ${styles.heading}`}>Pricing</h2>
+        <h5 className={`opacity-75 mt-3 ${styles.sub}`}>
+          List of all charges and taxes
+        </h5>
       </div>
+
+      {/* ===== CARDS SECTION ===== */}
       <div
-        className={`container text-center mt-5 p-5 d-flex ${styles.container}`}
+        className={`container text-center d-flex flex-wrap justify-content-center gap-4 p-4 ${styles.cardsWrapper}`}
       >
-        <div className={`${styles.imgtag} col-4`}>
-          <img src="/media/pricingMF.svg" alt="" />
-          <h2 className="mb-3">Free Equity Delivery</h2>
+        <div className={`${styles.cardBox}`}>
+          <img src="/media/pricingMF.svg" alt="Free Equity" />
+          <h3>Free Equity Delivery</h3>
           <p>
-            All equity delivery investments (NSE, BSE), are absolutely free — ₹
-            0 brokerage.
+            All equity delivery investments (NSE, BSE) are absolutely free — ₹0
+            brokerage.
           </p>
         </div>
-        <div className={`${styles.imgtag} col-4`}>
-          <img src="/media/intradayTrades.svg" alt="" />
-          <h2 className="mb-3">Intraday and F&O trades</h2>
+
+        <div className={`${styles.cardBox}`}>
+          <img src="/media/intradayTrades.svg" alt="Intraday" />
+          <h3>Intraday & F&O</h3>
           <p>
-            Flat ₹ 20 or 0.03% (whichever is lower) per executed order on
-            intraday trades across equity, currency, and commodity trades. Flat
-            ₹20 on all option trades.
+            Flat ₹20 or 0.03% (whichever is lower) per executed order across
+            equity, currency, and commodity trades.
           </p>
         </div>
-        <div className={`${styles.imgtag} col-4`}>
-          <img src="/media/pricingMF.svg" alt="" />
-          <h2 className="mb-3">Free direct MF</h2>
+
+        <div className={`${styles.cardBox}`}>
+          <img src="/media/pricingMF.svg" alt="Mutual Fund" />
+          <h3>Free Direct Mutual Funds</h3>
           <p>
-            All direct mutual fund investments are absolutely free — ₹ 0
-            commissions & DP charges.
+            All direct mutual funds are absolutely free — no commissions & DP
+            charges.
           </p>
         </div>
       </div>
@@ -41,4 +47,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default PricingHero;

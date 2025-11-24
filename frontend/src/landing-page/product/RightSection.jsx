@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./style.module.css";
 
 function RightSection({
   imageURL,
@@ -12,23 +13,21 @@ function RightSection({
   return (
     <section className="container my-5">
       <div className="row align-items-center">
-       
-        <div className="col-12 ml-5  col-md-6">
-          <h1>{productName}</h1>
-          <p>{productDescription}</p>
+        <div className="col-12 col-md-6">
+          <h1 className={styles.title}>{productName}</h1>
+          <p className={styles.desc}>{productDescription}</p>
 
-          <div className="mt-3">
+          <div className="mt-3 d-flex flex-wrap gap-2">
             {tryDemo && (
               <a
                 href={tryDemo}
-                className="btn btn-primary me-2"
+                className="btn btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Try Demo
               </a>
             )}
-
             {learnMore && (
               <a
                 href={learnMore}
@@ -41,33 +40,30 @@ function RightSection({
             )}
           </div>
 
-          <div className="mt-4 d-flex gap-2 align-items-center">
+          <div className="mt-4 d-flex gap-2 align-items-center flex-wrap">
             {googlePlay && (
-              <a href={googlePlay} target="_blank" rel="noopener noreferrer">
+              <a href={googlePlay} target="_blank">
                 <img
                   src="/media/googlePlayBadge.svg"
                   alt="Google Play"
-                  style={{ height: 40 }}
+                  className={styles.storeBadge}
                 />
               </a>
             )}
             {appStore && (
-              <a href={appStore} target="_blank" rel="noopener noreferrer">
+              <a href={appStore} target="_blank">
                 <img
                   src="/media/appstoreBadge.svg"
                   alt="App Store"
-                  style={{ height: 40 }}
+                  className={styles.storeBadge}
                 />
               </a>
             )}
           </div>
         </div>
-         <div className="col-12 col-md-6 text-center">
-          <img
-            src={imageURL}
-            alt={productName}
-            style={{ maxWidth: "100%", height: "auto" }}
-          />
+
+        <div className="col-12 col-md-6 text-center">
+          <img src={imageURL} alt={productName} className={styles.productImg} />
         </div>
       </div>
     </section>

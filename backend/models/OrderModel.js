@@ -1,6 +1,6 @@
 const { Model, model } = require("mongoose");
 
-const {OrderSchema} = require('./../model/OrderSchema');
+const {OrderSchema} = require('./../schemas/OrderSchema.js');
 
 const OrderModel = new model("holding",OrderSchema);
 

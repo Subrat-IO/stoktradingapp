@@ -1,58 +1,32 @@
-
-.containercol{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    height: 800px;
-}
-.LargestBrokerImg{
-    margin-left: -10rem;
-    margin-right: 10rem;
-    height: 400px;
-    width: 600px;
-}
-.Large{
-    font-size: 2.7rem;
-}
-.LargestBroker{
-    margin-right: -6rem;
-}
-.LargestBroker p{
-    font-size: 1.3rem;
-    margin-top: 1rem;
-    
-}
-.listitems{
-    font-size: 1.2rem;
-    gap: 8rem;
-    margin-top: 2rem;
+.awardsContainer {
+  margin-top: 4rem;
 }
 
-ul li{
-    margin-top: 1.5rem;
-    
-}
-.presslogo{
-    margin-top: 2rem;
+.Large {
+  font-size: clamp(1.4rem, 2.8vw, 2.4rem);
+  font-weight: 700;
 }
 
-@media (max-width: 1000px){
-    .LargestBrokerImg{
-        width: 50%;
-        height: 30vh;
-    }
-    .LargestBroker h1{
-        font-size: 2.1rem;
-    }
-    .LargestBroker p{
-        font-size: 1.2rem;
-    }
-    .LargestBroker ul li{
-        font-size: 0.8rem;
-    }
-    .presslogo{
-        width: 100%;
-    }
-
+.desc {
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+  color: #adb5bd;
+  margin-bottom: 1rem;
 }
 
+.listitems ul {
+  padding: 0;
+}
+
+.listitems li {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  margin-bottom: 8px;
+}
+
+.LargestBrokerImg {
+  max-width: 320px;
+}
+
+.presslogo {
+  width: 100%;
+  max-width: 380px;
+}

@@ -1,0 +1,78 @@
+/* PAGE WRAPPER */
+.home-page {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* MAIN CONTENT */
+.home-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 1.5rem 1rem 3rem;
+}
+
+/* SHARED SECTION STYLES */
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Optional: make hero breathe more */
+.section-hero {
+  margin-top: 1.5rem;
+}
+
+/* Optional: slightly different bg for CTA area */
+.section-accent {
+  padding: 2rem 1.25rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+/* ========= RESPONSIVE BREAKPOINTS ========= */
+
+/* Small phones */
+@media (max-width: 480px) {
+  .home-main {
+    padding-inline: 0.9rem;
+    gap: 2rem;
+  }
+
+  .section-accent {
+    padding: 1.5rem 1rem;
+    border-radius: 1.25rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .home-main {
+    padding: 2.5rem 2rem 3.5rem;
+    gap: 3rem;
+  }
+
+  .section-hero {
+    margin-top: 2rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .home-main {
+    padding: 3rem 2.5rem 4rem;
+    gap: 3.5rem;
+  }
+
+  .section {
+    max-width: 1120px;
+  }
+}
+
+/* Very large screens */
+@media (min-width: 1280px) {
+  .section {
+    max-width: 1200px;
+  }
+}

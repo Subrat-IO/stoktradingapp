@@ -59,4 +59,34 @@
         font-size: 1rem;
         margin-left: 4rem;
     }
+    .img {
+  max-width: 150px;
+}
+}.heading {
+  font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+}
+
+.img {
+  max-width: 480px;
+}
+
+.links a {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: clamp(0.85rem, 1.6vw, 1.1rem);
+}
+.heading {
+  font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+}
+
+.img {
+  max-width: 480px;
+}
+
+.links a {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: clamp(0.85rem, 1.6vw, 1.1rem);
 }

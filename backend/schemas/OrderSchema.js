@@ -6,3 +6,6 @@ const OrderSchema = new Schema({
     price:Number,
     mode:String,
 });
+
+
+module.exports = { OrderSchema };

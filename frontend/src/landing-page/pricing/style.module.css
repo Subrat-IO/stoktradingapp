@@ -17,3 +17,85 @@
     opacity: 70%;
     font-weight: 500;
 }
+/* WRAPPER SPACING */
+.wrapper {
+  padding: 4rem 1rem;
+}
+
+/* LIST STYLE */
+.list {
+  font-size: clamp(.9rem, 1vw + .35rem, 1.05rem);
+  color: #475569;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+  .wrapper {
+    padding: 3rem 0.8rem;
+  }
+}
+/* ===== HERO SECTION ===== */
+.heading {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
+.sub {
+  font-size: clamp(.9rem, 1.2vw, 1.1rem);
+}
+
+/* ===== CARDS WRAPPER ===== */
+.cardsWrapper {
+  margin-top: -10px;
+}
+
+/* ===== CARD BOX ===== */
+.cardBox {
+  width: 100%;
+  max-width: 350px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 2rem 1.4rem;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.cardBox:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+}
+
+/* CARD TEXT */
+.cardBox img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.cardBox h3 {
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.45rem);
+  margin-bottom: .7rem;
+}
+
+.cardBox p {
+  font-size: clamp(.85rem, 1vw, 1.02rem);
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+  .cardBox {
+    max-width: 300px;
+    padding: 1.6rem;
+  }
+  .cardBox img {
+    width: 100px;
+  }
+}

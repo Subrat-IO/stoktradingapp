@@ -15,13 +15,14 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={`${styles.container} navbar p-4`}>
+    <nav className={`${styles.navbar} navbar`}>
       <div className={styles.left}>
         <a href="/">
           <img src="/media/logo.svg" alt="logo" className={styles.logo} />
         </a>
       </div>
 
+      {/* Desktop Menu */}
       <div className={styles.menulinks}>
         <Link to="/signup" className={styles.navlink}>
           Sign Up
@@ -40,61 +41,33 @@ function Navbar() {
         </Link>
       </div>
 
-      {/* Dropdown (account menu) */}
+      {/* Mobile Menu */}
       <div className={styles.menuWrapper} ref={ddRef}>
         <button
-          type="button"
           className={styles.dropdownBtn}
           onClick={() => setOpen((s) => !s)}
-          aria-expanded={open}
-          aria-haspopup="true"
         >
-          <i className="bx bx-menu" />
+          <i className="bx bx-menu"></i>
         </button>
 
-        <div
-          className={`${styles.dropdownMenu} ${open ? styles.show : ""}`}
-          role="menu"
-        >
-          <Link
-            to="/account"
-            className={styles.dropdownItem}
-            onClick={() => setOpen(false)}
-          >
-            Your Account
+        <div className={`${styles.dropdownMenu} ${open ? styles.show : ""}`}>
+          <Link to="/signup" className={styles.dropdownItem}>
+            Sign Up
           </Link>
-          <Link
-            to="/stocks"
-            className={styles.dropdownItem}
-            onClick={() => setOpen(false)}
-          >
-            Your Stocks
+          <Link to="/about" className={styles.dropdownItem}>
+            About
           </Link>
-
-          <div className={`${styles.navlinks}`}>
-            <Link to="/signup" className={styles.navlink}>
-              SignUp
-            </Link>
-            <Link to="/about" className={styles.navlink}>
-              About
-            </Link>{" "}
-            <br />
-            <Link to="/products" className={styles.navlink}>
-              Products
-            </Link>
-            <Link to="/pricing" className={styles.navlink}>
-              Pricing
-            </Link>
-            <Link to="/support" className={styles.navlink}>
-              Support
-            </Link>
-          </div>
-          <Link
-            to="/logout"
-            className={styles.dropdownItem}
-            onClick={() => setOpen(false)}
-          >
-            Log Out <i className="bx bx-log-out" />
+          <Link to="/products" className={styles.dropdownItem}>
+            Products
+          </Link>
+          <Link to="/pricing" className={styles.dropdownItem}>
+            Pricing
+          </Link>
+          <Link to="/support" className={styles.dropdownItem}>
+            Support
+          </Link>
+          <Link to="/logout" className={styles.dropdownLogout}>
+            Log Out <i className="bx bx-log-out"></i>
           </Link>
         </div>
       </div>

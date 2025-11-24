@@ -1,41 +1,47 @@
-import React from 'react';
+import React from "react";
 import styles from "./style.module.css";
 
 function Awards() {
   return (
+    <div className={`container ${styles.awardsContainer}`}>
+      <div className="row align-items-center">
+        <div className="col-12 col-md-6 text-center">
+          <img
+            className={`${styles.LargestBrokerImg} img-fluid`}
+            src="/media/largestBroker.svg"
+            alt="LargestBroker"
+          />
+        </div>
 
-    <div className={`container ${styles.container}`} >
-      <div className={`row align-items-center ${styles.containercol}`}>
+        <div className="col-12 col-md-6">
+          <h1 className={styles.Large}>Largest Stock Broker in India</h1>
+          <p className={styles.desc}>
+            2+ million Zerodha clients contribute to over 15% of all retail
+            order volumes in India daily.
+          </p>
 
-        <img className={`col-6 ${styles.LargestBrokerImg}`} src="/media/largestBroker.svg" alt="LargestBroker" />
-        <div className={`col-6 ${styles.LargestBroker}`}>
-
-          <h1 className={`${styles.Large}`}>Largest Stock Broker in India</h1>
-          <p>2+ million Zerodha clients contribute to over 15% of all reatail order volumes in india daily by trading and investing in.</p>
-
-          <div className={`d-flex ${styles.listitems}`}>
+          <div className={`d-flex justify-content-between ${styles.listitems}`}>
             <ul>
-              <li>Futures And options</li>
+              <li>Futures & Options</li>
               <li>Commodity Derivatives</li>
               <li>Currency Derivatives</li>
             </ul>
             <ul>
-              <li>Stocks And Ipo</li>
+              <li>Stocks & IPO</li>
               <li>Direct Mutual Funds</li>
-              <li>Bonds and Golds</li>
+              <li>Bonds & Gold</li>
             </ul>
-
-
-          </div>
-          <div>
-            <img className={`${styles.presslogo}`} src="media/pressLogos.png" alt="" />
           </div>
 
+          <img
+            className={`${styles.presslogo} img-fluid mt-3`}
+            src="/media/pressLogos.png"
+            alt="press logo"
+          />
         </div>
-
       </div>
     </div>
-  )
+  );
 }
 
-export default Awards
+export default Awards;

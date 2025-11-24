@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const HoldingModel = require("./models/HoldingModel.js");
 const PositionModel = require("./models/PositionModel.js");
 const cors = require("cors");
+const orderModel = require("./models/OrderModel.js")
 
 require("dotenv").config();
 
@@ -25,9 +26,22 @@ app.get("/allholdings", async (req, res) => {
 });
 
 app.get("/allpositions", async (req, res) => {
-  const allPosition = await PositionModel.find({});
+  const allPosition = await PositionModel.find({
+    name:req.body.name,
+    qty:req.body.qty,
+    price:req.body.price,
+    mode:String,
+  });
   res.json(allPosition);
 });
+
+
+app.post("/neworder", async(req,res)=>{
+  let neworder = new orderModel({});
+  neworder.save();
+
+  res.send("new order saved");
+})
 
 const startServer = async () => {
   try {
