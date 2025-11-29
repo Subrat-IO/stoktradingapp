@@ -15,6 +15,7 @@ dist/
 dist-ssr/
 build/
 .cache/
+env
 
 # Local environment
 *.local
