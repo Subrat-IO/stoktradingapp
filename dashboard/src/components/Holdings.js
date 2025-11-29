@@ -3,22 +3,22 @@ import axios from "axios";
 import { VerticalGraph } from "./VerticalGraph";
 
 const Holdings = () => {
-  const [allHoldings, setAllHoldings] = useState([]);
+  const [allPosition, setAllPositions] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/allholdings").then((res) => {
-      setAllHoldings(res.data);
+    axios.get("http://localhost:8080/allpositions").then((res) => {
+      setAllPositions(res.data || []);
     });
   }, []);
 
-  const labels = allHoldings.map((item) => item.name || "-");
+  const labels = allPosition.map((item) => item.name || "-");
 
   const data = {
     labels,
     datasets: [
       {
         label: "Stock Price",
-        data: allHoldings.map((stock) => Number(stock.price ?? 0)),
+        data: allPosition.map((stock) => Number(stock.price ?? 0)),
         backgroundColor: "rgba(255, 99, 132, 0.5)",
       },
     ],
@@ -26,7 +26,7 @@ const Holdings = () => {
 
   return (
     <>
-      <h3 className="title">Holdings ({allHoldings.length})</h3>
+      <h3 className="title">Holdings ({allPosition.length})</h3>
 
       <div className="order-table">
         <table>
@@ -44,7 +44,7 @@ const Holdings = () => {
           </thead>
 
           <tbody>
-            {allHoldings.map((stock, index) => {
+            {allPosition.map((stock, index) => {
               const avg = Number(stock.avg ?? 0);
               const price = Number(stock.price ?? 0);
               const qty = Number(stock.qty ?? 0);
@@ -54,7 +54,10 @@ const Holdings = () => {
 
               const isProfit = pnl >= 0;
               const profClass = isProfit ? "profit" : "loss";
-              const dayClass = stock.isLoss ? "loss" : "profit";
+
+              // Determine daily change positivity
+              const dayValue = Number(stock.day ?? 0);
+              const dayClass = dayValue >= 0 ? "profit" : "loss";
 
               return (
                 <tr key={index}>
@@ -73,16 +76,17 @@ const Holdings = () => {
         </table>
       </div>
 
+      {/* Static Summary Values — can be made dynamic later */}
       <div className="row">
         <div className="col">
           <h5>
-            29,875.<span>55</span>{" "}
+            29,875.<span>55</span>
           </h5>
           <p>Total investment</p>
         </div>
         <div className="col">
           <h5>
-            31,428.<span>95</span>{" "}
+            31,428.<span>95</span>
           </h5>
           <p>Current value</p>
         </div>

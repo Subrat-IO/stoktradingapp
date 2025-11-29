@@ -1,4 +1,4 @@
-const { Model, model } = require("mongoose");
+const {  model } = require("mongoose");
 
 const {OrderSchema} = require('./../schemas/OrderSchema.js');
 
