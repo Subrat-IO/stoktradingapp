@@ -9,7 +9,7 @@ function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/register", {
+      await axios.post("https://stoktradingapp.onrender.com/register", {
         email,
         username,
         password,

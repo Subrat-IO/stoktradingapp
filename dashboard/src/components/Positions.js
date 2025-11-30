@@ -6,9 +6,11 @@ const Holdings = () => {
   const [allPosition, setallPositions] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/allpositions").then((res) => {
-      setallPositions(res.data);
-    });
+    axios
+      .get("https://stoktradingapp.onrender.com/allpositions")
+      .then((res) => {
+        setallPositions(res.data);
+      });
   }, []);
 
   const labels = allPosition.map((item) => item.name || "-");

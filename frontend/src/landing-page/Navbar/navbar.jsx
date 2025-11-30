@@ -54,6 +54,11 @@ function Navbar() {
           <Link to="/signup" className={styles.dropdownItem}>
             Sign Up
           </Link>
+          <Link
+            to="https://kite-nu.vercel.app/" className={styles.dropdownItem}
+          >
+            TryKite
+          </Link>
           <Link to="/about" className={styles.dropdownItem}>
             About
           </Link>
