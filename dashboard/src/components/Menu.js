@@ -87,6 +87,15 @@ const Menu = () => {
                 Apps
               </p>
             </Link>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="https://main.dkjs0btaqcx3z.amplifyapp.com/"
+              onClick={() => handleMenuClick(6)}
+            >
+              <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
+                Go to App
+              </p>
+            </Link>
           </li>
         </ul>
         <hr />
