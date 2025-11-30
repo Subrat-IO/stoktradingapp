@@ -39,6 +39,9 @@ function Navbar() {
         <Link to="/support" className={styles.navlink}>
           Support
         </Link>
+        <Link to="https://kite-nu.vercel.app/" className={styles.dropdownItem}>
+          TryKite
+        </Link>
       </div>
 
       {/* Mobile Menu */}
@@ -55,7 +58,8 @@ function Navbar() {
             Sign Up
           </Link>
           <Link
-            to="https://kite-nu.vercel.app/" className={styles.dropdownItem}
+            to="https://kite-nu.vercel.app/"
+            className={styles.dropdownItem}
           >
             TryKite
           </Link>
